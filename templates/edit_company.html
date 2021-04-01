@@ -1,0 +1,19 @@
+<html>
+
+<head>
+<title>Edit Company</title>
+</head>
+
+<body>
+    <form class="form-group" action="" method="POST">
+        <input type="text" placeholder="Name" name="name" value=" {{ form.c['name']}} ">
+        <input type="text" placeholder="Street" name="street" value="{{ }}"> 
+        <input type="text" placeholder="City" name="city" value=" {{ }}"> 
+        <input type="text" placeholder="State" name="state" value="{{  }}"> 
+        <input type="text" placeholder="ZIP" name="zip_code" value="{{ }}"> 
+        <input type="text" placeholder="Image URL" name="image_url" value="{{ c['image_url']}}"> 
+        <input type="text" placeholder="Bio" name="bio" value="{{ c['bio']}}"> 
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

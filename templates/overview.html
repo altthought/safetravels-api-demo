@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Admin Panel - Overview</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+
+    <body>
+            <div id="greeting">
+                Welcome, <i>{{ user }}</i>
+            </div>
+
+        <div id="add_content">
+            
+            <form action="" method="post">
+            <a class="btn" href="/admin/add_company">Add Company</a>
+            <a class="btn" href="/admin/add_coupon">Add Coupon</a>
+                <button class="btn btn-default" name="logout" value="logout">Logout</button>
+            </form>
+        </div>
+
+        <div id="overview_companies">
+            <h4>Companies : Debug Data</h4>
+            {% for c in companies %}
+                <!--<div class="inner"><code><a href="/admin/edit/company/{{ c.company_id }}">{{ c }}</a></code></div> -->
+                <div class="inner"><code>{{ c }}</code></div>
+            {% endfor %}
+        </div>
+
+        <div id="overview_coupons">
+            <h4>Coupons : Debug Data</h4>
+            {% for c in coupons %}
+                <!-- <div class="inner"><code><a href="/admin/edit/coupon/{{ c.coupon_id }}">{{ c }}</a></code></div> -->
+                <div class="inner"><code>{{ c }}</code></div>
+            {% endfor %}
+        </div>
+
+        <div id="overview_users">
+            <h4>Users : Debug Data</h4>
+            {% for u in users %}
+                <div class="inner"><code>{{ u }}</code></div>
+            {% endfor %}
+        </div>
+
+        <div id="overview_redeemed">
+            <h4>Receipts : Debug Data</h4>
+            {% for r in redeemed %}
+                <div class="inner"><code>{{ r }}</code></div>
+            {% endfor %}
+        </div>
+        
+    </body>
+</html>

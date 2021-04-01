@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Add Coupon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+</head>
+<body>
+    <form class="form-group" id="form" action="" method="POST">
+        <select name="company_id" form="form" >
+            {% for c in companies %}
+            <option value={{c.company_id}}>{{c.name}}</option>
+            {% endfor %}
+        </select>
+        <input type="text" placeholder="Points Required" name="pts_required" value="{{ request.form.pts_required }}"> 
+        <input type="text" placeholder="Coupon Summary" name="summary" value="{{ request.form.summary }}"> 
+        <input type="text" placeholder="Max number of uses" name="max_use" value="{{ request.form.max_use }}"> 
+        <input class="btn" type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
